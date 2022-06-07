@@ -1,0 +1,12 @@
+﻿  client.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12723,10): error C2467: 非法的匿名“struct”声明
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(20801,34): error C2133: “_IMAGE_POLICY_METADATA::Policies”: 未知的大小
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winioctl.h(4327,10): error C2467: 非法的匿名“struct”声明
+  ftp.cpp
+  server.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12723,10): error C2467: 非法的匿名“struct”声明
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(20801,34): error C2133: “_IMAGE_POLICY_METADATA::Policies”: 未知的大小
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winioctl.h(4327,10): error C2467: 非法的匿名“struct”声明
+F:\计算机网络课程设计\network\ftp\ftp\server.cpp(58,81): error C2440: “初始化”: 无法从“const char *”转换为“char *”
+F:\计算机网络课程设计\network\ftp\ftp\server.cpp(58,15): message : 转换丢失限定符
+  正在生成代码...
