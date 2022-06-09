@@ -1,0 +1,17 @@
+﻿  client2.cpp
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(54,38): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(82,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(116,49): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(147,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(151,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(153,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(155,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(156,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(157,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(158,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(159,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(179,8): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(195,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(196,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\client\client2.cpp(208,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  client.vcxproj -> F:\计算机网络课程设计\network\ftp\client\x64\Debug\client.exe

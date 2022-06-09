@@ -1,0 +1,2 @@
+F:\计算机网络课程设计\network\ftp\server\x64\Debug\server.exe
+F:\计算机网络课程设计\network\ftp\server\x64\Debug\server.pdb

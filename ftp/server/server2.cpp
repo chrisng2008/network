@@ -90,9 +90,9 @@ int SendFileRecord(SOCKET datatcps, WIN32_FIND_DATA* pfd)     //用来发送当前文件
 	{
 		//通过datatcps接口发送filerecord数据，成功返回发送的字节数  
 		//send向客户端发送数据 
-	   //原形：  send(Sock, buf, Len, 0);  //将数据原样返回
-	  //sock 为要发送数据的套接字，buf 为要发送的数据的缓冲区地址，len 为要发送的数据的字节数，flags 为发送数据时的选项。
-	  //最后的 flags 参数一般设置为 0 或 NULL，初学者不必深究。
+		//原形：  send(Sock, buf, Len, 0);  //将数据原样返回
+		//sock 为要发送数据的套接字，buf 为要发送的数据的缓冲区地址，len 为要发送的数据的字节数，flags 为发送数据时的选项。
+		//最后的 flags 参数一般设置为 0 或 NULL
 		printf("Error occurs when sending file list!\n");
 		return 0;
 	}
@@ -134,7 +134,7 @@ int SendFileList(SOCKET datatcps)
 int SendFile(SOCKET datatcps, FILE* file)
 {
 	printf(" sending file data..");
-	for (;;)     //从文件中循环读取数据并发送客户端   
+	while(true)     //从文件中循环读取数据并发送客户端   
 	{
 		int r = fread(sbuff, 1, 1024, file);//把file里面的内容读到sbuff缓冲区   
 		if (send(datatcps, sbuff, r, 0) == SOCKET_ERROR)
@@ -161,13 +161,13 @@ DWORD ConnectProcess()
 		return(-1);
 	}
 	printf("服务器监听中...\n");
-	for (;;)
+	while(true)
 	{
 		//接收客户端请求
 		sockserver = accept(sockclient, (struct sockaddr FAR*) & ClientAddr, &Addrlen);
 		//accept函数取出连接队列的第一个连接请求，sockclient是处于监听的套接字，ClientAddr 是监听的对象地址，         
 		//Addrlen是对象地址的长度 
-		for (;;)
+		while (true)
 		{
 			memset(rbuff, 0, 1024);    //说明：memset(ch,0,sizeof(ch));表示将ch的内容置为0，也就是清空ch
 			memset(sbuff, 0, 1024);
@@ -258,10 +258,10 @@ DWORD ConnectProcess()
 				strcpy(sbuff, rbuff);
 				send(sockserver, sbuff, 1024, 0);
 				SetCurrentDirectory(filename);   //设置当前目录，更换路径
-			}//cd  
+			}
 			closesocket(sockserver);
-		}//for 2
-	}//for 1 
+		}
+	}
 }
 
 

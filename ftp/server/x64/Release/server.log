@@ -1,0 +1,22 @@
+﻿  server2.cpp
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(89,5): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(80,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(111,6): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(139,38): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(187,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(210,6): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(220,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(245,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(250,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(257,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(258,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(191,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(194,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(221,10): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\计算机网络课程设计\network\ftp\server\server2.cpp(227,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  正在生成代码
+  1 of 13 functions ( 7.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  server.vcxproj -> F:\计算机网络课程设计\network\ftp\server\x64\Release\server.exe
