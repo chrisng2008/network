@@ -7,6 +7,8 @@
 #include <arpa/inet.h>
 #include <iostream>
 using namespace std;
+
+//接受命令行的参数
 int main(int argc, char ** argv)
 {
     //rawsocsniffer sniffer(htons(ETH_P_ALL));
@@ -19,34 +21,32 @@ int main(int argc, char ** argv)
 	switch (ch)
 	{
 	    case 'h':
-		cout<<"rawsocket usage:  [-h]  --help information"<<endl;
-		cout<<"            	  [-s]  --Source IP Address"<<endl;
-		cout<<"            	  [-d]  --Destination IP Address"<<endl;
-		cout<<"            	  [-a]  --Capture ARP packets"<<endl;
-		cout<<"            	  [-t]  --Capture TCP packets"<<endl;
-		cout<<"            	  [-u]  --Capture UDP packets"<<endl;
-		cout<<"            	  [-i]  --Capture ICMP packets"<<endl;
-		exit(0);
-	    case 's':
-		myfilter.sip=inet_addr(optarg);
-		break;
-	    case 'd':
-		myfilter.dip=inet_addr(optarg);
-		break;
+			cout<<"rawsocket usage:  [-h]  --help information"<<endl;
+			cout<<"            	  [-a]  --Capture ARP packets"<<endl;
+			cout<<"            	  [-t]  --Capture TCP packets"<<endl;
+			cout<<"            	  [-u]  --Capture UDP packets"<<endl;
+			cout<<"            	  [-i]  --Capture ICMP packets"<<endl;
+			exit(0);
+	    // case 's':
+		// 	myfilter.sip=inet_addr(optarg);
+		// 	break;
+	    // case 'd':
+		// 	myfilter.dip=inet_addr(optarg);
+		// 	break;
 	    case 'a':
-		sniffer.setbit((myfilter.protocol),1);
-		break;
+			sniffer.setbit((myfilter.protocol),1);
+			break;
 	    case 't':
-		sniffer.setbit((myfilter.protocol),2);
-		break;
+			sniffer.setbit((myfilter.protocol),2);
+			break;
 	    case 'u':
-		sniffer.setbit((myfilter.protocol),3);
-		break;
+			sniffer.setbit((myfilter.protocol),3);
+			break;
 	    case 'i':
-		sniffer.setbit((myfilter.protocol),4);
-		break;
+			sniffer.setbit((myfilter.protocol),4);
+			break;
 	    default:
-		break;
+			break;
 	}
     }
     cout<<"create sniffer succeed."<<endl;

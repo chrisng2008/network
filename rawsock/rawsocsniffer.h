@@ -3,7 +3,7 @@
 
 #include "rawsocket.h"
 
-//filter structure, you can define your own filter struct here;
+//定义过滤器结构体
 typedef struct filter
 {
     unsigned long sip;
@@ -11,6 +11,7 @@ typedef struct filter
     unsigned int protocol;    
 } filter;
 
+//定义嗅探器结构体
 class rawsocsniffer:public rawsocket
 {
     private:

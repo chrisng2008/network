@@ -19,7 +19,7 @@ rawsocsniffer::~rawsocsniffer()
     delete[] packet;
 }
 
-//set the socket to promiscuous mode which means to capture all packets.
+//设置网卡混杂模式，进行嗅探器初始化
 bool rawsocsniffer::init()
 {
     dopromisc("ens33");
@@ -36,9 +36,9 @@ void rawsocsniffer::setfilter(filter myfilter)
 bool rawsocsniffer::testbit(const unsigned int p,int k)
 {
     if((p>>(k-1))&0x01)
-	return true;
+    return true;
     else
-	return false;
+    return false;
 }
 
 void rawsocsniffer::setbit(unsigned int &p,int k)
@@ -46,59 +46,60 @@ void rawsocsniffer::setbit(unsigned int &p,int k)
     p=(p)|((0x01)<<(k-1));
 }
 
-//capture packets;
+//设置嗅探器接收数据包，然后分析数据包
 void rawsocsniffer::sniffer()
 {
     struct sockaddr_in from;
     int sockaddr_len=sizeof(struct sockaddr_in);
     int recvlen=0;
+    //不断进行嗅探
     while(1)
     {
-    	recvlen=receive(packet,max_packet_len,&from,&sockaddr_len);
-    	if(recvlen>0)
-    	{
-	    analyze();
-    	}
-   	 else
-    	{
-	    continue;
-    	}
-    }	 
+        recvlen=receive(packet,max_packet_len,&from,&sockaddr_len);
+        if(recvlen>0)
+        {
+        analyze();
+        }
+     else
+        {
+        continue;
+        }
+    }    
 }
 
-//analyze packets;
+//分析数据包
 void rawsocsniffer::analyze()
 {
     ether_header_t *etherpacket=(ether_header_t *)packet;
     if(simfilter.protocol==0)
-	simfilter.protocol=0xff;
+        simfilter.protocol=0xff;
     switch (ntohs(etherpacket->frametype))
     {
-	case 0x0800:
-	    if(((simfilter.protocol)>>1))
-	    {
-	    	cout<<"\n\n/*---------------ip packet--------------------*/"<<endl;
-	    	ParseIPPacket();
-	    }
-	    break;
-	case 0x0806:
-	    if(testbit(simfilter.protocol,1))
-	    {
-	    	cout<<"\n\n/*--------------arp packet--------------------*/"<<endl;
-	    	ParseARPPacket();
-	    }
-	    break;
-	case 0x0835:
-	    if(testbit(simfilter.protocol,5))
-	    {
-		cout<<"\n\n/*--------------RARP packet--------------------*/"<<endl;
-		ParseRARPPacket();
-	    }
-	    break;
-	default:
-	    cout<<"\n\n/*--------------Unknown packet----------------*/"<<endl;
-	    cout<<"Unknown ethernet frametype!"<<endl;
-	    break;
+    case 0x0800:
+        if(((simfilter.protocol)>>1))
+        {
+            cout<<"\n\n/*---------------ip packet--------------------*/"<<endl;
+            ParseIPPacket();
+        }
+        break;
+    case 0x0806:
+        if(testbit(simfilter.protocol,1))
+        {
+            cout<<"\n\n/*--------------arp packet--------------------*/"<<endl;
+            ParseARPPacket();
+        }
+        break;
+    case 0x0835:
+        if(testbit(simfilter.protocol,5))
+        {
+        cout<<"\n\n/*--------------RARP packet--------------------*/"<<endl;
+        ParseRARPPacket();
+        }
+        break;
+    default:
+        cout<<"\n\n/*--------------Unknown packet----------------*/"<<endl;
+        cout<<"Unknown ethernet frametype!"<<endl;
+        break;
     }
 }
 
@@ -109,42 +110,42 @@ void rawsocsniffer::ParseIPPacket()
     cout<<"ipheader.protocol: "<<int(ippacket->ipheader.protocol)<<endl;
     if(simfilter.sip!=0)
     {
-	if(simfilter.sip!=(ippacket->ipheader.src_ip))
-	    return;
+    if(simfilter.sip!=(ippacket->ipheader.src_ip))
+        return;
     }
 
     if(simfilter.dip!=0)
     {
-	if(simfilter.dip!=(ippacket->ipheader.des_ip))
-	    return;
+    if(simfilter.dip!=(ippacket->ipheader.des_ip))
+        return;
     }
 
     switch (int(ippacket->ipheader.protocol))
     {
-	case 1:
-	    if(testbit(simfilter.protocol,4))
-	    {
-	    	cout<<"Received an ICMP packet"<<endl;
-	    	ParseICMPPacket();
-	    }
-	    break;
-	case 6:
-	    if(testbit(simfilter.protocol,2))
-	    {
-	    	cout<<"Received an TCP packet"<<endl;
-	    	ParseTCPPacket();
-	    }
-	    break;
-	case 17:
-	    if(testbit(simfilter.protocol,3))
-	    {
-	    	cout<<"Received an UDP packet"<<endl;
-	    	ParseUDPPacket();
-	    }
-	    break;
-	default:
-	    cout<<"Unknown ip protocoltype"<<endl;
-	    break;
+    case 1:
+        if(testbit(simfilter.protocol,4))
+        {
+            cout<<"Received an ICMP packet"<<endl;
+            ParseICMPPacket();
+        }
+        break;
+    case 6:
+        if(testbit(simfilter.protocol,2))
+        {
+            cout<<"Received an TCP packet"<<endl;
+            ParseTCPPacket();
+        }
+        break;
+    case 17:
+        if(testbit(simfilter.protocol,3))
+        {
+            cout<<"Received an UDP packet"<<endl;
+            ParseUDPPacket();
+        }
+        break;
+    default:
+        cout<<"Unknown ip protocoltype"<<endl;
+        break;
     }
     
 }
@@ -187,7 +188,7 @@ void rawsocsniffer::ParseUDPPacket()
     print_ip_addr(udppacket->ipheader.des_ip);
     cout<<endl;
     cout<<setw(10)<<"srcport: "<<ntohs(udppacket->udpheader.src_port)<<" desport: "<<ntohs(udppacket->udpheader.des_port)\
-	<<" length:"<<ntohs(udppacket->udpheader.len)<<endl;
+    <<" length:"<<ntohs(udppacket->udpheader.len)<<endl;
 }
 
 //analyze tcp packets;

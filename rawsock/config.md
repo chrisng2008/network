@@ -89,3 +89,4 @@ sudo arpspoof -i ens33 -t 192.168.125.1 192.168.125.130
 ```
 
 ![image-20220609213240254](config.assets/image-20220609213240254.png)
+
