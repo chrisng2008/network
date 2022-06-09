@@ -28,6 +28,7 @@ void help() {     //处理help命令
         << "9. quit                    :退出程序" << endl;
 }
 
+
 void list(SOCKET sockfd)
 {
     int nRead;
@@ -215,6 +216,9 @@ int main()
         help();
     }
     if (strncmp(messge1, "?", 1) == 0) {
+        help();
+    }
+    if (strncmp(messge1, "？", 1) == 0) {
         help();
     }
 
