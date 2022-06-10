@@ -7,23 +7,32 @@ typedef unsigned long DWORD;
 
 #pragma pack(1) 
 typedef struct ether_header_t{
-    BYTE des_hw_addr[6];    
-    BYTE src_hw_addr[6];    
-    WORD frametype;         
+    BYTE des_hw_addr[6];    //目的地址
+    BYTE src_hw_addr[6];    //源地址
+    WORD frametype;         //帧格式
 } ether_header_t;   
 
 //define arp hearder
 typedef struct arp_header_t{
-    WORD hw_type;           
-    WORD prot_type;         
-    BYTE hw_addr_len;       
-    BYTE prot_addr_len;     
-    WORD flag;              
-    BYTE send_hw_addr[6];   
-    DWORD send_prot_addr;   
-    BYTE des_hw_addr[6];    
-    DWORD des_prot_addr;    
+    WORD hw_type;           //硬件地址
+    WORD prot_type;         //协议类型
+    BYTE hw_addr_len;       //硬件地址长度
+    BYTE prot_addr_len;     //协议地址长度
+    WORD flag;              //操作类型
+    BYTE send_hw_addr[6];   //发送端MAC地址
+    DWORD send_prot_addr;   //发送端IP地址
+    BYTE des_hw_addr[6];    //目标MAC地址
+    DWORD des_prot_addr;    //目标IP地址
 } arp_header_t;
+
+// 硬件类型：表示硬件地址的类型，值为1表示以太网地址
+// 协议类型：表示要映射的协议地址类型。它的值为0x0800表示IP地址类型
+// 硬件地址长度和协议地址长度以字节为单位，对于以太网上的IP地址的ARP请求或应答来说，他们的值分别为6和4
+// 操作类型,在报文中占2个字节,1表示ARP请求,2表示ARP应答,3表示RARP请求,4表示RARP应答
+// 发送端MAC地址：发送方设备的硬件地址；
+// 发送端IP地址：发送方设备的IP地址；
+// 目标MAC地址：接收方设备的硬件地址。
+// 目标IP地址：接收方设备的IP地址。
 
 //define ip hearder
 typedef struct ip_header_t{
@@ -69,13 +78,14 @@ typedef struct icmp_header_t{
     WORD seq;               
 } icmp_header_t;
 
+//arp数据包结构体
 typedef struct arp_packet_t{
-    ether_header_t etherheader;
-    arp_header_t arpheader;
+    ether_header_t etherheader;     //帧首部结构体
+    arp_header_t arpheader;         //arp报文首部
 } arp_packet_t;
 
 typedef struct ip_packet_t{
-    ether_header_t etherheader;
+    ether_header_t etherheader;     
     ip_header_t ipheader;
 } ip_packet_t;
 

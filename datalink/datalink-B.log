@@ -1,0 +1,41 @@
+datalink.exe b 
+=========================================================================
+                          Station B                                 
+-------------------------------------------------------------------------
+Protocol.lib, version 3.0, Build: Oct 19 2009 (jiangy@public3.bta.net.cn)
+Channel: 8000 bps, 270 ms propagation delay, bit error rate 1.0E-005
+Log file "datalink-B.log", TCP port 59144, debug mask 0x00
+Station B is connecting station A (TCP port 59144) ... Done.
+New epoch: Fri Jun 10 03:21:21 2022
+=========================================================================
+Coded by zdf, Build Time: Jun 10 2022  02:52:33
+2.559 .... 8 packets received, 7754 bps, 96.92%, Err 0 (0.0e+000)
+4.697 .... 16 packets received, 7708 bps, 96.35%, Err 0 (0.0e+000)
+6.815 .... 24 packets received, 7717 bps, 96.47%, Err 0 (0.0e+000)
+8.956 .... 32 packets received, 7701 bps, 96.26%, Err 0 (0.0e+000)
+11.018 .... 40 packets received, 7749 bps, 96.86%, Err 0 (0.0e+000)
+13.160 .... 48 packets received, 7732 bps, 96.65%, Err 0 (0.0e+000)
+15.270 .... 56 packets received, 7737 bps, 96.71%, Err 0 (0.0e+000)
+17.367 .... 64 packets received, 7746 bps, 96.83%, Err 0 (0.0e+000)
+19.474 .... 72 packets received, 7749 bps, 96.87%, Err 0 (0.0e+000)
+23.256 .... 73 packets received, 6554 bps, 81.93%, Err 2 (1.1e-005)
+25.332 .... 83 packets received, 6831 bps, 85.38%, Err 2 (1.1e-005)
+27.736 .... 90 packets received, 6754 bps, 84.43%, Err 2 (9.6e-006)
+29.846 .... 97 packets received, 6757 bps, 84.46%, Err 3 (1.3e-005)
+31.995 .... 103 packets received, 6686 bps, 83.58%, Err 3 (1.2e-005)
+34.105 .... 106 packets received, 6450 bps, 80.62%, Err 5 (1.9e-005)
+36.231 .... 116 packets received, 6639 bps, 82.98%, Err 5 (1.8e-005)
+38.362 .... 124 packets received, 6698 bps, 83.72%, Err 5 (1.7e-005)
+40.480 .... 132 packets received, 6753 bps, 84.41%, Err 6 (1.9e-005)
+42.619 .... 139 packets received, 6750 bps, 84.38%, Err 6 (1.8e-005)
+44.726 .... 147 packets received, 6799 bps, 84.99%, Err 6 (1.7e-005)
+46.863 .... 155 packets received, 6839 bps, 85.49%, Err 6 (1.7e-005)
+48.979 .... 163 packets received, 6878 bps, 85.98%, Err 6 (1.6e-005)
+51.102 .... 170 packets received, 6873 bps, 85.91%, Err 7 (1.8e-005)
+53.224 .... 178 packets received, 6907 bps, 86.34%, Err 8 (1.9e-005)
+55.878 .... 183 packets received, 6761 bps, 84.51%, Err 9 (2.1e-005)
+58.061 .... 195 packets received, 6932 bps, 86.64%, Err 9 (2.0e-005)
+60.164 .... 203 packets received, 6962 bps, 87.02%, Err 9 (1.9e-005)
+62.313 .... 211 packets received, 6985 bps, 87.31%, Err 9 (1.9e-005)
+64.405 .... 219 packets received, 7012 bps, 87.66%, Err 9 (1.8e-005)
+66.509 .... 227 packets received, 7037 bps, 87.96%, Err 9 (1.7e-005)
