@@ -279,11 +279,7 @@ int main()
         printf("\n");
         list(sockclient);               //列出接受到的列表内容
     }
-    if (strncmp(rbuff, "pwd", 3) == 0)
-    {
-        list(sockclient);               //列出接受到的内容--绝对路径
-    }
-    if (strncmp(rbuff, "cd", 2) == 0) {}      //cd
+
 
     closesocket(sockclient);            //关闭连接
     WSACleanup();                       //释放Winsock    
